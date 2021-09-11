@@ -1,0 +1,11 @@
+page-setting{
+  .toolbar-background {
+  background-color: #1E90FF;
+  #home-search {
+    width: 50%;
+    margin: auto;
+}
+}
+
+
+}

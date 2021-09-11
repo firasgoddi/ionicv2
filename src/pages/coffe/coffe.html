@@ -1,0 +1,139 @@
+
+<ion-header>
+  <ion-navbar >
+    <button ion-button >
+       <ion-icon color ="white" name="arrow-back"></ion-icon>
+
+    </button>
+    <font size="5" color="white">
+    <th>
+    <ion-title><font size="5" color="white">Coffe</font></ion-title> </th>
+    <th>
+    <ion-searchbar
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar></th>
+    <th> <ion-icon name="notifications"></ion-icon></th>
+    </font>
+  </ion-navbar>
+</ion-header>
+  <ion-content padding class="getstart">
+<ion-slides pager>
+
+  <ion-slide >
+
+      <img src="./img/sams.png"/>
+          <ion-card-title>
+          {{this.nom}}
+          </ion-card-title>
+
+          <ion-row >
+            <ion-col>
+              <button ion-button color="primary" full large icon-start (click)="coffeelike()">
+      {{ this.thumbup}}        <img src="./img/thumb.png"/>
+
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button color="danger" full large icon-start (click)="coffeedislike()">
+            {{ this.thumbdown}}     <img src="./img/red.svg"/>
+
+              </button>
+            </ion-col>
+          </ion-row>
+
+  <img src="./img/map.jpg"/>
+
+
+  </ion-slide>
+
+
+  <ion-slide  >
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-start>
+          <ion-img src="./img/sams.png"></ion-img>
+        </ion-avatar>
+        <h2>Sam's</h2>
+        <p>Hammam Sousse, 2016</p>
+      </ion-item>
+
+        <img src="./img/samsoff.png">
+          <ion-card-content>
+        <p></p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='thumbs-up'></ion-icon>
+            12 Likes
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='text'></ion-icon>
+            4 Comments
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='thumbs-down'></ion-icon>
+            4 Dislikes
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+  </ion-slide>
+
+    <ion-slide>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          phone
+        </ion-label>
+        <ion-input type="phone"  [(ngModel)]="phones" name="phones"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          established
+        </ion-label>
+        <ion-input [(ngModel)]="establish" name="establish"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          adresse
+        </ion-label>
+        <ion-input value="hammam sousse"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          opening_hour
+        </ion-label>
+        <ion-input [(ngModel)]="opening" name="opening" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          closing_hour
+        </ion-label>
+        <ion-input  [(ngModel)]="closing" name="closing" ></ion-input>
+      </ion-item>
+
+
+
+
+  </ion-slide>
+
+</ion-slides>
+</ion-content>

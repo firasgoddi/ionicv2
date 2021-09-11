@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Comments</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button color="primary" clear small icon-start (click)="showPrompt()">    add
+  </button>
+    <ion-card *ngFor="let c of comment ">
+      <ion-item>
+      <p>{{c.text}}</p>
+      </ion-item>
+
+      <button ion-button color="primary" clear small icon-start (click)=" modifierPrompt(c._id)">Modifier
+      </button>
+      <button ion-button color="primary" clear small icon-start (click)="deletecomment(c._id)">    Supprimer
+      </button>
+    </ion-card>
+</ion-content>

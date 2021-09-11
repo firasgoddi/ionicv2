@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <font size="4" color="white">
+      <ion-icon name="menu"></ion-icon></font>
+    </button>
+    <th>
+    <ion-title><font size="4" color="white">Profil</font> </ion-title> </th>
+    <th>
+    <ion-searchbar
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)"
+      (id)="home-search"
+      >
+    </ion-searchbar></th>
+  <th>   <font size="4" color="white"><ion-icon name="notifications"></ion-icon></font></th>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart">
+  <ion-card>
+
+    <img src="./img/islem.jpg"/>
+
+
+
+
+    </ion-card>
+
+  <ion-item>
+  <ion-label>First Name</ion-label>
+  <ion-input [(ngModel)]="first_name" name="first_name"></ion-input>
+  </ion-item>
+
+<ion-item>
+<ion-label>Last Name</ion-label>
+<ion-input  [(ngModel)]="last_name" name="last_name"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label>Email</ion-label>
+<ion-input [(ngModel)]="email" name="email"> </ion-input>
+</ion-item>
+<ion-item>
+<ion-label>Phone Number</ion-label>
+<ion-input [(ngModel)]="phone" name="phone"></ion-input>
+</ion-item>
+<button ion-button color="primary" clear small icon-start full (click)="modifier(id,profil)" >    Save
+</button>
+</ion-content>

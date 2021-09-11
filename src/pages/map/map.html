@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+        <font size="4" color="white">
+      <ion-icon name="menu"></ion-icon></font>
+    </button>
+    <th>
+    <ion-title><font size="4" color="white">Map</font> </ion-title> </th>
+    <th>
+    <ion-searchbar
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar></th>
+  <th><font size="4" color="white"> <ion-icon name="notifications"></ion-icon></font></th>
+
+  </ion-navbar>
+</ion-header>
+<ion-header>
+  <!-- <ion-navbar>
+    <ion-title>
+      Map
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+    </ion-buttons>
+  </ion-navbar> -->
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+</ion-content>

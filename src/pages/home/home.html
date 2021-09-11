@@ -1,0 +1,78 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle><font size="4" color="white">
+      <ion-icon name="menu"></ion-icon></font>
+    </button>
+
+    <ion-row padding-right="15px">
+      <ion-col>
+        <font size="4" color="white">
+        <th>
+        <ion-searchbar
+          [(ngModel)]="myInput"
+          [showCancelButton]="shouldShowCancel"
+          (ionInput)="onInput($event)"
+          (ionCancel)="onCancel($event)">
+        </ion-searchbar></th>
+        </font>
+      </ion-col>
+      <ion-col col-1 align-self-center>
+        <font size="4" color="white">
+        <th> <ion-icon name="notifications"></ion-icon></th>
+        </font>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+
+<ion-card *ngFor="let o of offres">
+
+  <ion-item>
+    <ion-avatar item-start>
+      <ion-img src="./img/sams.png"></ion-img>
+    </ion-avatar>
+    <h2>Sam's</h2>
+    <p>Hammam Sousse, 2016</p>
+  </ion-item>
+
+    <img src="./img/samsoff.png">
+      <ion-card-content>
+    <p>{{o.text}} </p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button color="primary" clear small icon-start (click)="modifierlike(o._id)">
+        <ion-icon name='thumbs-up'></ion-icon>
+        {{o.thumb_up}}
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color="primary" clear small icon-start (click)="pagecomment(o._id)">
+        <ion-icon name='text'></ion-icon>
+        4 Comments
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color="primary" clear small icon-start (click)="modifierdislike(o._id)">
+        <ion-icon name='thumbs-down'></ion-icon>
+    {{o.thumb_down}}
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+
+
+
+</ion-content>
+
+<style>
+  .social-cards ion-col {
+    padding: 0;
+  }
+</style>

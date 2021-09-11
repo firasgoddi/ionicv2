@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+<font size="4" color="white">
+      <ion-icon name="menu"></ion-icon></font>
+    </button>
+
+    <ion-title><font size="4" color="white">List</font></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="getstart">
+<ion-content class="outer-content">
+  <ion-list  >
+
+    <ion-item-sliding *ngFor="let c of coffes " >
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="./img/sams.png">
+        </ion-avatar>
+        <h2>{{c.name}}</h2>
+        <p><a  (click)="godetail(c._id)"   >view</a></p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+  </ion-list>
+
+</ion-content>
+</ion-content>

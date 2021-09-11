@@ -1,0 +1,68 @@
+
+<ion-content padding class="getmap">
+
+	  <div class="login-content">
+
+	    <!-- Logo -->
+	    <div padding-horizontal text-center class="animated fadeInDown">
+	      <div class="logo"></div>
+	      <h2 ion-text class="text-primary">
+	        <strong>  <font size="6" color="white">Coffee In Touch</font></strong>
+	      </h2>
+	    </div>
+
+	    <!-- Login form -->
+			<div style="align:center">
+	    <form class="list-form">
+	      <ion-item>
+	        <ion-label floating>
+	          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+	          Email
+	        </ion-label>
+	        <ion-input [(ngModel)]="email"name="email"></ion-input>
+	      </ion-item>
+
+	      <ion-item>
+	        <ion-label floating>
+	          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+	          Password
+	        </ion-label>
+	        <ion-input type ="password" [(ngModel)]="password" name="password"></ion-input>
+	      </ion-item>
+	    </form>
+
+	   
+	    <div>
+	      <button ion-button icon-start block color="dark" tappable (click)="login(email,password)">
+	        <ion-icon name="log-in"></ion-icon>
+	        SIGN IN
+	      </button>
+
+	      <p text-center ion-text color="secondary">Or Sign in with:</p>
+
+	      <ion-grid>
+	        <ion-row>
+	          <ion-col col-6>
+	            <button ion-button icon-only block class="btn-facebook" click="loginfb()">
+	              <ion-icon name="logo-facebook"></ion-icon>
+	            </button>
+	          </ion-col>
+
+	          <ion-col col-6>
+	            <button ion-button icon-only block class="btn-gplus">
+	              <ion-icon name="logo-googleplus"></ion-icon>
+	            </button>
+	          </ion-col>
+	        </ion-row>
+	      </ion-grid>
+
+	    </div>
+
+
+	    <!-- Other links -->
+	    <div text-center margin-top>
+	      <span ion-text color="secondary" tappable (click)="register()">New here? <strong>Sign up</strong></span>
+	    </div>
+			</div>
+	  </div>
+</ion-content>
